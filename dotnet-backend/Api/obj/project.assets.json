@@ -13454,13 +13454,13 @@
       "projectName": "Students",
       "projectPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/Students.csproj",
       "packagesPath": "/Users/ramirobedoya/.nuget/packages/",
-      "outputPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj",
+      "outputPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/ramirobedoya/.config/NuGet/NuGet.Config"
+        "/Users/ramirobedoya/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13482,51 +13482,50 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
           "AutoMapper": {
             "target": "Package",
-            "version": "6.2.2"
+            "version": "[6.2.2, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.5"
+            "version": "[2.0.5, )"
           },
           "Microsoft.AspNetCore.Antiforgery": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
           },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
           },
           "Microsoft.AspNetCore.Server.IISIntegration": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
           },
           "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
           },
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
-            "version": "6.10.5"
+            "version": "[6.10.5, )"
           },
           "MySql.Data.EntityFrameworkCore.Design": {
             "target": "Package",
-            "version": "6.10.5"
+            "version": "[6.10.5, )"
           }
         },
         "imports": [

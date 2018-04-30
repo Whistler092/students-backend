@@ -25,7 +25,7 @@ namespace Students.Entities
                 /*
                  * ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString
                 */
-                const string serverName = "mysql";
+                const string serverName = "127.0.0.1";
                 const string databaseName = "students";
                 const string databaseUser = "root";
                 const string databasePass = "12345";
@@ -45,11 +45,15 @@ namespace Students.Entities
         public new DbSet<Role> Roles { get; set; }
         public DbSet<People> Peoples { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder modelbuilder)
+        public DbSet<Owner> Owners  { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<PenaltyFee> PenaltyFees { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelbuilder)
 		{
             base.OnModelCreating(modelbuilder);
 
-            modelbuilder.Entity<People>();
+            //modelbuilder.Entity<People>();
 
 
 		}
