@@ -13450,11 +13450,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Students/Students.csproj",
+      "projectUniqueName": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/Students.csproj",
       "projectName": "Students",
-      "projectPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Students/Students.csproj",
+      "projectPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/Students.csproj",
       "packagesPath": "/Users/ramirobedoya/.nuget/packages/",
-      "outputPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Students/obj",
+      "outputPath": "/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{66A89ED6-DF03-4458-AEA6-F7CBB7BE7222}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Students/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Api/Startup.cs">
     <Files>
-      <File FileName="Students/Startup.cs" Line="34" Column="54" />
-      <File FileName="Students/Program.cs" Line="24" Column="6" />
-      <File FileName="Students/Entities/DbStudentsContext.cs" Line="1" Column="1" />
+      <File FileName="Api/Startup.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

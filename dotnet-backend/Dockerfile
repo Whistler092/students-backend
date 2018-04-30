@@ -5,7 +5,7 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY Students.sln ./
-COPY Students/Students.csproj Api/
+COPY Api/Students.csproj Api/
 
 RUN dotnet restore
 COPY . .
@@ -18,4 +18,4 @@ RUN dotnet publish -c Release -o /app/
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Students.dll"]
+ENTRYPOINT ["dotnet", "/app/Students.dll"]
