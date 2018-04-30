@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS `students` DEFAULT CHARACTER SET latin1 ;
+USE `students` ;

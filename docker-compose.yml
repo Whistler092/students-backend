@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mysql:
+    hostname: mysql-students
+    container_name: mysql-students
+    build:
+      context: ./Database
+      args:
+          - MYSQL_DATABASE=${MYSQL_DATABASE}
+          - MYSQL_USER=${MYSQL_USER}
+          - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+          - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data-students:/var/lib/mysql
+  students:
+    image: students
+    build:  
+      context: ./dotnet-backend
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    ports:
+      - "8000:80"
+
+volumes:
+  db-data-students:

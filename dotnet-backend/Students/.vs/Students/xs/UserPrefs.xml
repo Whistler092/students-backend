@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{66A89ED6-DF03-4458-AEA6-F7CBB7BE7222}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Entities/People.cs">
+    <Files>
+      <File FileName="Program.cs" Line="23" Column="26" />
+      <File FileName="Startup.cs" Line="47" Column="1" />
+      <File FileName="Entities/DbStudentsContext.cs" Line="24" Column="1" />
+      <File FileName="Entities/User.cs" Line="12" Column="6" />
+      <File FileName="appsettings.json" Line="3" Column="23" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Entities/Role.cs" Line="3" Column="4" />
+      <File FileName="Entities/People.cs" Line="10" Column="2" />
+      <File FileName="Controllers/PeoplesController.cs" Line="41" Column="61" />
+      <File FileName="Controllers/ValuesController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Students PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
