@@ -1,12 +1,21 @@
 ﻿<Properties StartupConfiguration="{66A89ED6-DF03-4458-AEA6-F7CBB7BE7222}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Api/Controllers/PeoplesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Api/Entities/Owner.cs">
     <Files>
-      <File FileName="Api/Controllers/PeoplesController.cs" Line="23" Column="14" />
+      <File FileName="Api/wwwroot/scripts/controllers/mainCtr.js" Line="71" Column="56" />
+      <File FileName="Api/wwwroot/views/main.html" Line="66" Column="63" />
+      <File FileName="Api/Entities/PenaltyFee.cs" Line="48" Column="9" />
+      <File FileName="Api/Entities/Vehicle.cs" Line="13" Column="35" />
+      <File FileName="Api/Controllers/PenaltyFeeController.cs" Line="24" Column="50" />
+      <File FileName="Api/Entities/DbStudentsContext.cs" Line="62" Column="41" />
+      <File FileName="Api/Program.cs" Line="17" Column="35" />
+      <File FileName="Api/Entities/Owner.cs" Line="32" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/Controllers/PenaltyFeeController.cs" relfile="Api/Controllers/PenaltyFeeController.cs" line="39" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

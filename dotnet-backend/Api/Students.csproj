@@ -7,6 +7,10 @@
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="Entities\" />
+    <Folder Include="wwwroot\scripts\" />
+    <Folder Include="wwwroot\scripts\controllers\" />
+    <Folder Include="wwwroot\views\" />
+    <Folder Include="wwwroot\scripts\services\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,4 +31,11 @@
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="wwwroot\EmptyCSSFile.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20180430142711_TablasBasicas.cs" />
+    <Compile Remove="Migrations\20180430142711_TablasBasicas.Designer.cs" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,80 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{main.Tittle}}</h3>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="form-horizontal">
+            <form id="penaltyFeeForm" name="penaltyFeeForm" novalidate>
+                <div class="modal-body" id="modal-body">
+                    <h6>Agregar la Multa a Crear</h6>
+                    <div class="form-group">
+                        <select class="form-control" name="Owner" id="Owner" ng-change="main.getVehiclesByUser()"
+                                ng-model="main.data.IdOwner" required>
+                            <option value="" selected>Persona multada</option>
+                            <option ng-repeat="option in main.userList" value="{{option.id}}">{{option.names}} {{option.lastName}} - [{{option.identification}}]</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="Vehicle" id="Vehicle"
+                                ng-model="main.data.IdVehicle" required>
+                            <option value="" selected>Seleccione su vehiculo</option>
+                            <option ng-repeat="option in main.userVehicleList" value="{{option.id}}">{{option.licensePlate}} {{option.model}} - [{{option.year}}]</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Description" id="Description" tabindex="1" class="form-control"
+                               placeholder="Descripción" ng-model="main.data.Description" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Value" id="Value" tabindex="1" class="form-control"
+                               placeholder="Valro de la Multa" ng-model="main.data.Value" required>
+                    </div>
+                    <div ng-show="(penaltyFeeForm.$submitted || penaltyFeeForm.firstName.$touched) && penaltyFeeForm.$invalid"
+                         class="message-pending-fields bg-danger">
+                        <div ng-show="penaltyFeeForm.Owner.$error.required">- ¿A quien va dirigida la multa?</div>
+                        <div ng-show="penaltyFeeForm.Vehicle.$error.required">- ¿Cual es el vehiculo?</div>
+                        <div ng-show="penaltyFeeForm.Description.$error.required">- ¿Alguna descripción?</div>
+                        <div ng-show="penaltyFeeForm.Value.$error.required">- ¿Cual es el valor de la multa?</div>
+
+                    </div>
+                    <div ng-if="profile.pendingmessage" class="alert alert-primary">
+                        {{main.pendingmessage}}
+                    </div>
+                    <div ng-if="main.errrormessage" class="alert alert-danger">
+                        {{main.errrormessage}}
+                    </div>
+                    <div ng-if="main.donemessage" class="alert alert-dismissible alert-success">
+                        <button type="button" data-ng-click="closeDone()" class="close" data-dismiss="alert">&times;</button>
+                        {{main.donemessage}}
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" ng-click="main.ok(penaltyFeeForm)">OK</button>
+                    <button class="btn btn-warning" type="button" ng-click="main.cancel()">Cancel</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-6">
+
+        <!--<hr />-->
+        <!--penaltyFeeList-->
+        <h4>Ultimas multas</h4>
+
+        <div class="row" ng-repeat="penalty in main.penaltyFeeList">
+            <div class="list-group">
+                <a href="#" ng-click="main.selectedOption(penalty.id)" class="list-group-item">
+                    <h4 class="list-group-item-heading">({{penalty.state == '1' ? 'Activa' : 'Pagada' }}) {{penalty.vehicle.licensePlate}}</h4>
+                    <p class="list-group-item-text">{{penalty.description}}</p>
+                    <p>Creada: {{penalty.date | date : format : timezone}} </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

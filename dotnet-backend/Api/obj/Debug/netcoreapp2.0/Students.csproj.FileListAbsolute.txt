@@ -14,7 +14,6 @@
 /Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/bin/Debug/netcoreapp2.0/Students.runtimeconfig.dev.json
 /Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/bin/Debug/netcoreapp2.0/Students.dll
 /Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/bin/Debug/netcoreapp2.0/Students.pdb
-/Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj/Debug/netcoreapp2.0/Students.csprojResolveAssemblyReference.cache
 /Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj/Debug/netcoreapp2.0/Students.csproj.CoreCompileInputs.cache
 /Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj/Debug/netcoreapp2.0/Students.AssemblyInfoInputs.cache
 /Users/ramirobedoya/workspace/moviles2/backend/dotnet-backend/Api/obj/Debug/netcoreapp2.0/Students.AssemblyInfo.cs

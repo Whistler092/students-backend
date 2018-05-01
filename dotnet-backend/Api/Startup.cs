@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Cors;
 using Students.Entities;
 
 namespace Students
@@ -27,6 +28,16 @@ namespace Students
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddCors();
+            services.AddCors(options =>
+                    {
+                        options.AddPolicy("CorsPolicy",
+                            builder => builder.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowCredentials() );
+                    });
+                    
 
             services.AddDbContext<DbStudentsContext>();
 
@@ -56,8 +67,14 @@ namespace Students
             });
 
             app.UseAuthentication();
-            app.UseMvc();
 
+ 
+            /*app.UseCors(
+                options => options.WithOrigins("*").AllowAnyMethod()
+            );*/
+            app.UseCors("CorsPolicy");
+
+            app.UseMvc();
             app.Use(async (context, next) => {
                 await next();
                 if (context.Response.StatusCode == 404 &&

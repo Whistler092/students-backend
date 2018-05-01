@@ -19,7 +19,7 @@ namespace Students.Entities
 
         private static string ConnectionString
         {
-            
+
             get
             {
                 /*
@@ -45,17 +45,23 @@ namespace Students.Entities
         public new DbSet<Role> Roles { get; set; }
         public DbSet<People> Peoples { get; set; }
 
-        public DbSet<Owner> Owners  { get; set; }
+        public DbSet<Owner> Owners { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<PenaltyFee> PenaltyFees { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelbuilder)
-		{
+        {
             base.OnModelCreating(modelbuilder);
+            modelbuilder.Entity<PenaltyFee>()
+                        .HasOne(p => p.Owner)
+                        .WithMany(p => p.Penalties)
+                        .HasForeignKey(f => f.IdOwner);
 
-            //modelbuilder.Entity<People>();
+            modelbuilder.Entity<PenaltyFee>()
+                       .HasOne(p => p.Vehicle)
+                        .WithMany(p => p.Penalties)
+                       .HasForeignKey(f => f.IdVehicle);
 
-
-		}
-	}
+        }
+    }
 }

@@ -4,15 +4,17 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.ValueGeneration;
+using MySql.Data.EntityFrameworkCore.Storage.Internal;
 using Students.Entities;
 using System;
 
 namespace Students.Migrations
 {
     [DbContext(typeof(DbStudentsContext))]
-    partial class DbStudentsContextModelSnapshot : ModelSnapshot
+    [Migration("20180430223854_firstMigration")]
+    partial class firstMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

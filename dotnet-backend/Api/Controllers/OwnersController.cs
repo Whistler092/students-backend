@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Students.Entities;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,36 +13,54 @@ namespace Students.Controllers
     [Route("api/[controller]")]
     public class OwnersController : Controller
     {
-        // GET: api/values
+        // GET: api/owners
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            using(DbStudentsContext db = new DbStudentsContext()){
+                return Ok(await db.Owners.ToListAsync());
+            }
         }
 
-        // GET api/values/5
+        // GET api/owners/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            using (DbStudentsContext db = new DbStudentsContext())
+            {
+                var owner = await db.Owners.FindAsync(id);
+                return Ok(owner);
+
+            }
         }
 
-        // POST api/values
+        // POST api/owners
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task<IActionResult> Post([FromBody]Owner data)
         {
-        }
+            if (!ModelState.IsValid)
+                return BadRequest();
 
-        // PUT api/values/5
+            using (DbStudentsContext db = new DbStudentsContext())
+            {
+                var result = await db.AddAsync(data);
+                await db.SaveChangesAsync();
+
+                var path = new Uri(HttpContext.Request.Path);
+                return Created(path, data.Id);
+            }
+        }
+        /*
+        // PUT api/owners/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/owners/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-        }
+        }*/
     }
 }
