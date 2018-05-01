@@ -24,7 +24,7 @@ services:
     links:
       - mysql
     ports:
-      - "8000:80"
+      - "5000:80"
 
 volumes:
   db-data-students:

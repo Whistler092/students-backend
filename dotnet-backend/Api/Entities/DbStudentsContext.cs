@@ -25,7 +25,7 @@ namespace Students.Entities
                 /*
                  * ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString
                 */
-                const string serverName = "127.0.0.1";
+                const string serverName = "mysql";
                 const string databaseName = "students";
                 const string databaseUser = "root";
                 const string databasePass = "12345";

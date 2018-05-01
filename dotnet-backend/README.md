@@ -15,3 +15,13 @@ Pre-Requisitos:
   - docker
   - docker-compose
   
+
+
+```
+$ dotnet ef migrations add nuevaMigracion
+$ dotnet ef database update 
+
+
+Comandos básicos 
+$ dotnet ef migrations -h
+```
