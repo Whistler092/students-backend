@@ -34,5 +34,6 @@ angular
 
   })
   .constant('ngAuthSettings', {
-        apiServiceBaseUri: 'http://0.0.0.0:5000/api'
+        /*apiServiceBaseUri: 'http://0.0.0.0:5000/api'*/
+        apiServiceBaseUri: 'http://dmparcial2.eastus.cloudapp.azure.com:5000/api'
     });

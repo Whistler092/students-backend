@@ -14,4 +14,6 @@ Pre-Requisitos:
 
   - docker
   - docker-compose
-  
+
+docker-machine env dm-netcore  
+eval $(docker-machine env dm-netcore)

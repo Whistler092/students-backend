@@ -14,10 +14,8 @@ namespace Students.Entities
 
         public string Identification { get; set; }
 
-        [JsonIgnore]
         public virtual ICollection<PenaltyFee> Penalties { get; set; }
 
-        [JsonIgnore]
         public virtual ICollection<Vehicle> Vehicles { get; set; }
 
     }

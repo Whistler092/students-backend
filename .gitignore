@@ -1,1 +1,4 @@
 .DS_Store
+dotnet-backend/Api/bin/
+dotnet-backend/Api/obj/
+dotnet-backend/.vs/

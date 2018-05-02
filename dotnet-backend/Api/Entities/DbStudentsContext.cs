@@ -62,6 +62,11 @@ namespace Students.Entities
                         .WithMany(p => p.Penalties)
                        .HasForeignKey(f => f.IdVehicle);
 
+            modelbuilder.Entity<Vehicle>()
+                        .HasOne(p => p.Owner)
+                        .WithMany(p => p.Vehicles)
+                        .HasForeignKey(f => f.IdOwner);
+
         }
     }
 }

@@ -15,10 +15,15 @@ namespace Students.Controllers
     {
         // GET: api/owners
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]string identification)
         {
-            using(DbStudentsContext db = new DbStudentsContext()){
-                return Ok(await db.Owners.ToListAsync());
+            using(DbStudentsContext db = new DbStudentsContext())
+            {
+                return Ok(await db.Owners
+                          .Where(i => string.IsNullOrEmpty(identification) || i.Identification.Equals(identification))
+                          .Include(i => i.Penalties)
+                          .Include(i => i.Vehicles)
+                          .ToListAsync());
             }
         }
 
@@ -33,6 +38,7 @@ namespace Students.Controllers
 
             }
         }
+
 
         // POST api/owners
         [HttpPost]
