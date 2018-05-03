@@ -26,13 +26,7 @@ namespace Students.Controllers
             }
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
+      
         // POST api/PenaltyFee
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]PenaltyFee data)
@@ -49,6 +43,25 @@ namespace Students.Controllers
 
                 var path = new Uri(HttpContext.Request.Path);
                 return Created(path, data.Id);
+            }
+        }
+
+
+        // GET: api/vehicle
+        [HttpGet]
+        [Route("{id}/paid")]
+        public async Task<IActionResult> PayPenalty(int id)
+        {
+            using (DbStudentsContext db = new DbStudentsContext())
+            {
+
+                var penalty = await db.PenaltyFees.FindAsync(id);
+                penalty.State = false;
+
+                db.Update(penalty);
+
+                await db.SaveChangesAsync();
+                return Ok(); 
             }
         }
         /*
